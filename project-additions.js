@@ -12,6 +12,9 @@
   ];
   const styles = document.createElement('style');
   styles.textContent = `
+    /* Use the site's existing project-tag component with matching accent colors. */
+    .tag-variant-uiux[data-v-5556fafc]{background-color:#d9e8df;color:#245649;border:1px solid #9fc5b3}
+    .tag-variant-figma[data-v-5556fafc]{background-color:#e8def4;color:#523873;border:1px solid #b7a2d0}
     .projects-cards > .ad-added-project {
       position: relative; display: flex; flex-direction: column; min-width: 0;
       border: 1px solid rgba(120,151,168,.38); border-radius: 3px;
