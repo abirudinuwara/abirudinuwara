@@ -2,16 +2,6 @@
 (() => {
   const entries = [
     {
-      title: 'CivicPulse',
-      category: 'UI / UX DESIGN · FIGMA',
-      description: 'A civic-focused digital interface concept exploring clear information architecture, intuitive navigation, accessible visual hierarchy and consistent layouts. The Figma design presents the interface and its visual direction.',
-      url: 'https://www.figma.com/proto/BCsOm3Lkg4j56FyzZZoOvd/CivicPulse-_-Abiru-Dinuwara?node-id=1-5799&p=f&t=drQrZM7x3hZb6mOI-1&scaling=contain&content-scaling=fixed&page-id=1%3A2444',
-      action: 'View Interactive Prototype',
-      detailsUrl: 'https://www.figma.com/design/BCsOm3Lkg4j56FyzZZoOvd/CivicPulse-_-Abiru-Dinuwara?node-id=1-2444',
-      detailsAction: 'View Design Details',
-      art: 'civic'
-    },
-    {
       title: 'Readify',
       category: 'WEB DEVELOPMENT · HTML / CSS / JAVASCRIPT',
       description: 'A reading companion that brings book discovery and personal reading tools together. Browse and filter books, get genre-based recommendations, track pages read, save reading selections and enjoy background audio while reading.',
