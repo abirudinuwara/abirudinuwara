@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+<title id="title">Readify — web development case study cover</title>
+<desc id="desc">Illustrated book explorer interface, shown as an editorial graphic rather than a screenshot.</desc>
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#31245b"/><stop offset="1" stop-color="#7757a8"/></linearGradient>
+ <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fffdfc"/><stop offset="1" stop-color="#f4effa"/></linearGradient>
+ <filter id="shadow" x="-20%" y="-20%" width="150%" height="150%"><feDropShadow dx="0" dy="19" stdDeviation="19" flood-color="#1b1241" flood-opacity=".3"/></filter>
+</defs>
+<rect width="1200" height="700" fill="url(#bg)"/>
+<g opacity=".12" stroke="#ffffff"><path d="M0 115H1200M0 230H1200M0 345H1200M0 460H1200M0 575H1200M120 0V700M260 0V700M400 0V700M540 0V700M680 0V700M820 0V700M960 0V700M1100 0V700"/></g>
+<text x="80" y="88" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="bold" letter-spacing="5" fill="#e7dafd">WEB DEVELOPMENT   •   CASE STUDY</text>
+<text x="80" y="160" font-family="Arial,Helvetica,sans-serif" font-size="59" font-weight="bold" fill="#fff">Readify</text>
+<g filter="url(#shadow)" transform="translate(82 201)">
+ <rect width="1036" height="422" rx="23" fill="url(#panel)"/>
+ <rect width="1036" height="70" rx="23" fill="#ebe1f8"/>
+ <rect y="48" width="1036" height="22" fill="#ebe1f8"/>
+ <circle cx="41" cy="35" r="9" fill="#cc9ae5"/><circle cx="67" cy="35" r="9" fill="#c4aaf0"/><circle cx="93" cy="35" r="9" fill="#a4c7e1"/>
+ <rect x="147" y="25" width="105" height="20" rx="10" fill="#a891d6"/>
+ <rect x="728" y="26" width="58" height="15" rx="7" fill="#bbadd6"/>
+ <rect x="808" y="26" width="58" height="15" rx="7" fill="#bbadd6"/>
+ <rect x="888" y="26" width="99" height="30" rx="9" fill="#7b54b9"/>
+ <text x="35" y="120" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="bold" fill="#37275f">Discover your next read</text>
+ <rect x="36" y="142" width="590" height="37" rx="10" fill="#e7dbf4"/>
+ <circle cx="61" cy="160" r="8" fill="none" stroke="#997dbf" stroke-width="3"/>
+ <path d="M67 166l7 7" stroke="#997dbf" stroke-width="3" stroke-linecap="round"/>
+ <rect x="87" y="154" width="172" height="10" rx="5" fill="#c6b6d9"/>
+ <rect x="646" y="142" width="170" height="37" rx="10" fill="#ded5eb"/>
+ <rect x="838" y="142" width="155" height="37" rx="10" fill="#7053b2"/>
+ <rect x="36" y="203" width="295" height="182" rx="12" fill="#f6e9fd"/>
+ <rect x="370" y="203" width="295" height="182" rx="12" fill="#f0e7fa"/>
+ <rect x="704" y="203" width="291" height="182" rx="12" fill="#f6e9fd"/>
+ <g transform="translate(115 227)"><rect width="105" height="127" rx="5" fill="#e4a4bd"/><rect width="13" height="127" rx="4" fill="#b96997"/><rect x="28" y="25" width="60" height="7" rx="3" fill="#ffecf7"/><rect x="28" y="43" width="45" height="7" rx="3" fill="#ffecf7"/></g>
+ <g transform="translate(453 227)"><rect width="105" height="127" rx="5" fill="#8eafbc"/><rect width="13" height="127" rx="4" fill="#59889a"/><rect x="28" y="25" width="60" height="7" rx="3" fill="#e3f4f6"/><rect x="28" y="43" width="45" height="7" rx="3" fill="#e3f4f6"/></g>
+ <g transform="translate(790 227)"><rect width="105" height="127" rx="5" fill="#efd295"/><rect width="13" height="127" rx="4" fill="#d5a969"/><rect x="28" y="25" width="60" height="7" rx="3" fill="#fff8e9"/><rect x="28" y="43" width="45" height="7" rx="3" fill="#fff8e9"/></g>
+</g>
+<text x="600" y="665" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#e4d5fb" letter-spacing="2">ILLUSTRATIVE CASE STUDY COVER  ·  EXPLORE THE LIVE SITE FOR ACTUAL SCREENS</text>
+</svg>
