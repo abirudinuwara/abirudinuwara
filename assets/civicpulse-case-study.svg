@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+<title id="title">CivicPulse — civic experience design case study</title>
+<desc id="desc">Illustrative civic interface composition representing layout hierarchy and interface design. Not a screenshot from Figma.</desc>
+<defs>
+ <linearGradient id="bg" x1="0" x2="1" y2="1"><stop stop-color="#1e414b"/><stop offset="1" stop-color="#44766c"/></linearGradient>
+ <linearGradient id="panel" x1="0" x2="1"><stop stop-color="#fbf4e8"/><stop offset="1" stop-color="#f4ead9"/></linearGradient>
+ <filter id="shadow" x="-20%" y="-20%" width="150%" height="150%"><feDropShadow dx="0" dy="20" stdDeviation="20" flood-color="#092c2a" flood-opacity=".22"/></filter>
+</defs>
+<rect width="1200" height="700" fill="url(#bg)"/>
+<g opacity=".13" stroke="#d6eed9"><path d="M0 115H1200M0 230H1200M0 345H1200M0 460H1200M0 575H1200M120 0V700M260 0V700M400 0V700M540 0V700M680 0V700M820 0V700M960 0V700M1100 0V700"/></g>
+<text x="86" y="90" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="bold" letter-spacing="5" fill="#c5f1dd">UI / UX   •   DESIGN CASE STUDY</text>
+<text x="86" y="158" font-family="Arial,Helvetica,sans-serif" font-size="58" font-weight="bold" letter-spacing="-1.5" fill="#fff9eb">CivicPulse</text>
+<g filter="url(#shadow)" transform="translate(80 203)">
+<rect width="1040" height="425" rx="23" fill="url(#panel)"/>
+<rect width="1040" height="74" rx="23" fill="#ecdeca"/>
+<rect y="49" width="1040" height="25" fill="#ecdeca"/>
+<circle cx="42" cy="35" r="9" fill="#d7a48b"/><circle cx="68" cy="35" r="9" fill="#e2c27e"/><circle cx="94" cy="35" r="9" fill="#86af9e"/>
+<rect x="151" y="24" width="152" height="23" rx="11" fill="#c9c1ad"/>
+<rect x="756" y="26" width="67" height="18" rx="7" fill="#c7c3af"/>
+<rect x="848" y="26" width="67" height="18" rx="7" fill="#c7c3af"/>
+<rect x="940" y="19" width="72" height="32" rx="8" fill="#2d746a"/>
+<rect x="30" y="100" width="229" height="293" rx="15" fill="#e0dac8"/>
+<circle cx="74" cy="140" r="20" fill="#b8c9b6"/>
+<rect x="103" y="130" width="124" height="12" rx="6" fill="#8bad9e"/>
+<rect x="53" y="192" width="178" height="29" rx="8" fill="#b9d4c7"/>
+<rect x="53" y="242" width="152" height="12" rx="6" fill="#c5bfae"/>
+<rect x="53" y="273" width="175" height="12" rx="6" fill="#c5bfae"/>
+<rect x="53" y="304" width="143" height="12" rx="6" fill="#c5bfae"/>
+<rect x="289" y="100" width="709" height="110" rx="15" fill="#d6e7da"/>
+<rect x="322" y="129" width="390" height="20" rx="7" fill="#356b62"/>
+<rect x="322" y="167" width="505" height="13" rx="6" fill="#91b7a5"/>
+<rect x="289" y="232" width="336" height="161" rx="15" fill="#eee3d2"/>
+<rect x="654" y="232" width="344" height="161" rx="15" fill="#eee3d2"/>
+<circle cx="346" cy="282" r="20" fill="#c4d9cd"/>
+<circle cx="711" cy="282" r="20" fill="#c4d9cd"/>
+<rect x="377" y="271" width="207" height="17" rx="6" fill="#89a79b"/>
+<rect x="742" y="271" width="209" height="17" rx="6" fill="#89a79b"/>
+<rect x="320" y="331" width="262" height="12" rx="6" fill="#c7bdad"/>
+<rect x="685" y="331" width="267" height="12" rx="6" fill="#c7bdad"/>
+<rect x="320" y="357" width="214" height="12" rx="6" fill="#d2c9b8"/>
+<rect x="685" y="357" width="214" height="12" rx="6" fill="#d2c9b8"/>
+</g>
+<text x="600" y="661" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#dbf1e8" letter-spacing="2">ILLUSTRATIVE CASE STUDY COVER  ·  NOT A FIGMA SCREENSHOT</text>
+</svg>
