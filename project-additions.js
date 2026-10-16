@@ -5,8 +5,10 @@
       title: 'CivicPulse',
       category: 'UI / UX DESIGN · FIGMA',
       description: 'A civic-focused digital interface concept exploring clear information architecture, intuitive navigation, accessible visual hierarchy and consistent layouts. The Figma design presents the interface and its visual direction.',
-      url: 'https://www.figma.com/design/BCsOm3Lkg4j56FyzZZoOvd/CivicPulse-_-Abiru-Dinuwara?node-id=1-2444',
-      action: 'View Figma design',
+      url: 'https://www.figma.com/proto/BCsOm3Lkg4j56FyzZZoOvd/CivicPulse-_-Abiru-Dinuwara?node-id=1-5799&p=f&t=drQrZM7x3hZb6mOI-1&scaling=contain&content-scaling=fixed&page-id=1%3A2444',
+      action: 'View Interactive Prototype',
+      detailsUrl: 'https://www.figma.com/design/BCsOm3Lkg4j56FyzZZoOvd/CivicPulse-_-Abiru-Dinuwara?node-id=1-2444',
+      detailsAction: 'View Design Details',
       art: 'civic'
     },
     {
@@ -50,6 +52,14 @@
     .ad-added-project h3{font:700 clamp(24px,2.5vw,33px)/1.15 Inter,Arial,sans-serif;letter-spacing:-.04em;margin:0;color:#fff}
     .ad-added-project p{font:400 14px/1.75 Inter,Arial,sans-serif;color:#c1d2db;margin:0}
     .ad-added-project .ad-action{margin-top:auto;padding-top:14px;color:#9de6e3;font:700 13px/1.4 Inter,Arial,sans-serif}
+    .ad-added-project .ad-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto;padding-top:14px}
+    .ad-added-project .ad-actions a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:11px 16px;border-radius:5px;text-decoration:none;font:700 13px/1.35 Inter,Arial,sans-serif;transition:background .2s ease,transform .2s ease}
+    .ad-added-project .ad-actions a:hover{transform:translateY(-2px)}
+    .ad-added-project .ad-actions a:focus-visible{outline:3px solid #9de6e3;outline-offset:3px}
+    .ad-added-project .ad-actions .ad-primary{background:#9de6e3;color:#09222d}
+    .ad-added-project .ad-actions .ad-primary:hover{background:#c7f5f0}
+    .ad-added-project .ad-actions .ad-secondary{border:1px solid #87adb8;color:#e2f4f8;background:transparent}
+    .ad-added-project .ad-actions .ad-secondary:hover{background:rgba(157,230,227,.12)}
     .ad-added-project:focus-visible{outline:3px solid #9de6e3;outline-offset:3px}
     @media(max-width:640px){.ad-added-project .ad-art{height:220px}.ad-added-project .ad-content{padding:24px}}
     @media(prefers-reduced-motion:reduce){.ad-added-project{transition:none!important}}
@@ -62,17 +72,33 @@
     if (grid.querySelector('[data-ad-project]')) return;
     const frag = document.createDocumentFragment();
     for (const item of entries) {
-      const card = document.createElement('a');
+      // CivicPulse has two distinct destinations, so its card must not be an
+      // anchor containing nested anchors. Readify remains a whole-card link.
+      const card = document.createElement(item.detailsUrl ? 'article' : 'a');
       card.className = 'ad-added-project';
       card.dataset.adProject = item.art;
-      card.href = item.url;
-      card.target = '_blank';
-      card.rel = 'noopener noreferrer';
-      card.innerHTML = '<div class="ad-art ' + item.art + '">' + art(item.art) + '</div><div class="ad-content"><span class="ad-category"></span><h3></h3><p></p><span class="ad-action"></span></div>';
+      if (!item.detailsUrl) {
+        card.href = item.url;
+        card.target = '_blank';
+        card.rel = 'noopener noreferrer';
+      }
+      const actions = item.detailsUrl
+        ? '<div class="ad-actions"><a class="ad-primary" target="_blank" rel="noopener noreferrer"></a><a class="ad-secondary" target="_blank" rel="noopener noreferrer"></a></div>'
+        : '<span class="ad-action"></span>';
+      card.innerHTML = '<div class="ad-art ' + item.art + '">' + art(item.art) + '</div><div class="ad-content"><span class="ad-category"></span><h3></h3><p></p>' + actions + '</div>';
       card.querySelector('.ad-category').textContent = item.category;
       card.querySelector('h3').textContent = item.title;
       card.querySelector('p').textContent = item.description;
-      card.querySelector('.ad-action').textContent = item.action + ' ↗';
+      if (item.detailsUrl) {
+        const prototype = card.querySelector('.ad-primary');
+        prototype.href = item.url;
+        prototype.textContent = item.action + ' ↗';
+        const details = card.querySelector('.ad-secondary');
+        details.href = item.detailsUrl;
+        details.textContent = item.detailsAction + ' ↗';
+      } else {
+        card.querySelector('.ad-action').textContent = item.action + ' ↗';
+      }
       frag.appendChild(card);
     }
     grid.prepend(frag);
