@@ -54,12 +54,6 @@
       -webkit-line-clamp:3;
       overflow:hidden;
     }
-    @media (max-width:639px) {
-      .projects-cards[data-v-3bf82988] {grid-auto-rows:auto;}
-      .projects-cards[data-v-3bf82988] > .preview-card[data-v-03144b76] {
-        height:auto;
-      }
-    }
   `;
   document.head.appendChild(styles);
 })();
