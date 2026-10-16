@@ -1,106 +1,65 @@
-/* Additional real projects for the existing portfolio's Projects grid. */
+/* Global project-card polish shared by all portfolio projects. */
 (() => {
-  const entries = [
-    {
-      title: 'Readify',
-      category: 'WEB DEVELOPMENT · HTML / CSS / JAVASCRIPT',
-      description: 'A reading companion that brings book discovery and personal reading tools together. Browse and filter books, get genre-based recommendations, track pages read, save reading selections and enjoy background audio while reading.',
-      url: 'https://abirudinuwara.github.io/Readiyf/',
-      action: 'Explore live website',
-      art: 'readify'
-    }
-  ];
   const styles = document.createElement('style');
+  styles.id = 'portfolio-project-card-uniformity';
   styles.textContent = `
-    /* Use the site's existing project-tag component with matching accent colors. */
-    .tag-variant-uiux[data-v-5556fafc]{background-color:#d9e8df;color:#245649;border:1px solid #9fc5b3}
-    .tag-variant-figma[data-v-5556fafc]{background-color:#e8def4;color:#523873;border:1px solid #b7a2d0}
-    .projects-cards > .ad-added-project {
-      position: relative; display: flex; flex-direction: column; min-width: 0;
-      border: 1px solid rgba(120,151,168,.38); border-radius: 3px;
-      background: #0f202a; color:#f1f8fb; overflow:hidden; text-decoration:none;
-      transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease;
+    /* Case-study tags continue the native tag design. */
+    .tag-variant-uiux[data-v-5556fafc] {
+      background-color:#d9e8df; color:#245649; border:1px solid #9fc5b3;
     }
-    .projects-cards > .ad-added-project:hover,
-    .projects-cards > .ad-added-project:focus-visible {
-      transform:translateY(-5px); border-color:#90dfe8; box-shadow:0 18px 40px rgba(0,0,0,.2);
+    .tag-variant-figma[data-v-5556fafc] {
+      background-color:#e8def4; color:#523873; border:1px solid #b7a2d0;
     }
-    .ad-added-project .ad-art{height:clamp(180px,24vw,310px);position:relative;overflow:hidden;display:grid;place-items:center}
-    .ad-added-project .ad-art::after{content:'';position:absolute;inset:0;opacity:.25;background-image:linear-gradient(#b9faff25 1px,transparent 1px),linear-gradient(90deg,#b9faff25 1px,transparent 1px);background-size:24px 24px}
-    .ad-added-project .ad-art.civic{background:linear-gradient(140deg,#10364b,#0f7482)}
-    .ad-added-project .ad-art.readify{background:linear-gradient(140deg,#251b54,#8161d1)}
-    .ad-added-project .ad-device{position:relative;z-index:1;width:72%;height:67%;background:#f3f7fb;border:7px solid #d8e6ed;border-radius:10px;box-shadow:16px 15px 0 #0003;overflow:hidden}
-    .ad-added-project .ad-device-bar{height:17%;background:#c5dce5;display:flex;gap:5px;align-items:center;padding-left:11px}
-    .ad-added-project .ad-device-bar i{width:6px;height:6px;background:#3f8d9c;border-radius:50%}
-    .ad-added-project .ad-device-body{display:grid;grid-template-columns:24% 1fr;gap:10px;padding:13px;height:83%}
-    .ad-added-project .ad-device-body b{background:#d2e8ec;border-radius:4px}
-    .ad-added-project .ad-device-main{display:grid;grid-template-rows:35% 1fr;gap:10px}
-    .ad-added-project .ad-device-main i{display:block;background:#d2e8ec;border-radius:4px}
-    .ad-added-project .ad-books{position:relative;z-index:1;display:flex;align-items:end;justify-content:center;gap:12px;transform:rotate(-8deg)}
-    .ad-added-project .ad-books i{display:block;width:54px;height:120px;border-radius:5px 9px 9px 5px;background:#f6c57e;border-left:8px solid #eaa25e;box-shadow:9px 9px 0 #0002}
-    .ad-added-project .ad-books i:nth-child(2){height:165px;background:#b4e7e7;border-color:#5faabf}
-    .ad-added-project .ad-books i:nth-child(3){height:140px;background:#f5a8cb;border-color:#dc7aa9}
-    .ad-added-project .ad-content{padding:27px 28px 30px;background:#10232f;display:flex;flex-direction:column;gap:12px;flex:1}
-    .ad-added-project .ad-category{font:700 10px/1.5 ui-monospace,Consolas,monospace;letter-spacing:.1em;color:#88e0df}
-    .ad-added-project h3{font:700 clamp(24px,2.5vw,33px)/1.15 Inter,Arial,sans-serif;letter-spacing:-.04em;margin:0;color:#fff}
-    .ad-added-project p{font:400 14px/1.75 Inter,Arial,sans-serif;color:#c1d2db;margin:0}
-    .ad-added-project .ad-action{margin-top:auto;padding-top:14px;color:#9de6e3;font:700 13px/1.4 Inter,Arial,sans-serif}
-    .ad-added-project .ad-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto;padding-top:14px}
-    .ad-added-project .ad-actions a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:11px 16px;border-radius:5px;text-decoration:none;font:700 13px/1.35 Inter,Arial,sans-serif;transition:background .2s ease,transform .2s ease}
-    .ad-added-project .ad-actions a:hover{transform:translateY(-2px)}
-    .ad-added-project .ad-actions a:focus-visible{outline:3px solid #9de6e3;outline-offset:3px}
-    .ad-added-project .ad-actions .ad-primary{background:#9de6e3;color:#09222d}
-    .ad-added-project .ad-actions .ad-primary:hover{background:#c7f5f0}
-    .ad-added-project .ad-actions .ad-secondary{border:1px solid #87adb8;color:#e2f4f8;background:transparent}
-    .ad-added-project .ad-actions .ad-secondary:hover{background:rgba(157,230,227,.12)}
-    .ad-added-project:focus-visible{outline:3px solid #9de6e3;outline-offset:3px}
-    @media(max-width:640px){.ad-added-project .ad-art{height:220px}.ad-added-project .ad-content{padding:24px}}
-    @media(prefers-reduced-motion:reduce){.ad-added-project{transition:none!important}}
+
+    /* All native project cards have equal-height grid tracks and imagery. */
+    .projects-cards[data-v-3bf82988] {
+      grid-auto-rows:1fr;
+      align-items:stretch;
+    }
+    .projects-cards[data-v-3bf82988] > .preview-card[data-v-03144b76] {
+      box-sizing:border-box;
+      display:flex;
+      flex-direction:column;
+      height:100%;
+      min-width:0;
+    }
+    .projects-cards .preview-card-top[data-v-03144b76] {
+      aspect-ratio:16 / 9;
+      width:100%;
+      flex-shrink:0;
+    }
+    .projects-cards .preview-card-image-container[data-v-03144b76],
+    .projects-cards .preview-card-image-wrapper[data-v-03144b76] {
+      aspect-ratio:16 / 9;
+      width:100%;
+    }
+    .projects-cards .preview-card-image[data-v-03144b76] {
+      display:block;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+    .projects-cards .preview-card-content[data-v-03144b76] {
+      flex:1 1 auto;
+      min-width:0;
+    }
+    .projects-cards .preview-card-title[data-v-03144b76] {
+      line-height:1.2;
+    }
+    .projects-cards .preview-card-description[data-v-03144b76] {
+      line-height:1.45;
+      min-height:4.35em;
+      display:-webkit-box;
+      -webkit-box-orient:vertical;
+      -webkit-line-clamp:3;
+      overflow:hidden;
+    }
+    @media (max-width:639px) {
+      .projects-cards[data-v-3bf82988] {grid-auto-rows:auto;}
+      .projects-cards[data-v-3bf82988] > .preview-card[data-v-03144b76] {
+        height:auto;
+      }
+    }
   `;
   document.head.appendChild(styles);
-  const art = (type) => type === 'civic'
-    ? '<div class="ad-device" aria-hidden="true"><div class="ad-device-bar"><i></i><i></i><i></i></div><div class="ad-device-body"><b></b><div class="ad-device-main"><i></i><i></i></div></div></div>'
-    : '<div class="ad-books" aria-hidden="true"><i></i><i></i><i></i></div>';
-  function insertCards(grid) {
-    if (grid.querySelector('[data-ad-project]')) return;
-    const frag = document.createDocumentFragment();
-    for (const item of entries) {
-      // CivicPulse has two distinct destinations, so its card must not be an
-      // anchor containing nested anchors. Readify remains a whole-card link.
-      const card = document.createElement(item.detailsUrl ? 'article' : 'a');
-      card.className = 'ad-added-project';
-      card.dataset.adProject = item.art;
-      if (!item.detailsUrl) {
-        card.href = item.url;
-        card.target = '_blank';
-        card.rel = 'noopener noreferrer';
-      }
-      const actions = item.detailsUrl
-        ? '<div class="ad-actions"><a class="ad-primary" target="_blank" rel="noopener noreferrer"></a><a class="ad-secondary" target="_blank" rel="noopener noreferrer"></a></div>'
-        : '<span class="ad-action"></span>';
-      card.innerHTML = '<div class="ad-art ' + item.art + '">' + art(item.art) + '</div><div class="ad-content"><span class="ad-category"></span><h3></h3><p></p>' + actions + '</div>';
-      card.querySelector('.ad-category').textContent = item.category;
-      card.querySelector('h3').textContent = item.title;
-      card.querySelector('p').textContent = item.description;
-      if (item.detailsUrl) {
-        const prototype = card.querySelector('.ad-primary');
-        prototype.href = item.url;
-        prototype.textContent = item.action + ' ↗';
-        const details = card.querySelector('.ad-secondary');
-        details.href = item.detailsUrl;
-        details.textContent = item.detailsAction + ' ↗';
-      } else {
-        card.querySelector('.ad-action').textContent = item.action + ' ↗';
-      }
-      frag.appendChild(card);
-    }
-    grid.prepend(frag);
-  }
-  const apply = () => {
-    const grid = document.querySelector('.projects-cards');
-    if (grid) insertCards(grid);
-  };
-  apply();
-  const observer = new MutationObserver(apply);
-  observer.observe(document.documentElement,{childList:true,subtree:true});
 })();
